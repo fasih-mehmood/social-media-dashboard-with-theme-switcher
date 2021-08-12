@@ -23,14 +23,13 @@
         <p>Dark Mode</p>
         <div class="switch-container">
           <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" class="color-mode">
             <span class="slider round"></span>
           </label>
         </div>
       </div>
     </div>
   </header>
-
 
   <section class="section-cards">
     <div class="container">
@@ -218,6 +217,31 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const body = document.querySelector("body");
+    const toggler = document.querySelector(".color-mode");
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      enableDark();
+      toggler.checked = true;
+    } else {
+      disableDark();
+      toggler.checked = false;
+    };
+
+    function enableDark() {
+      body.classList.add("dark");
+    };
+
+    function disableDark() {
+      body.classList.remove("dark");
+    };
+
+    toggler.addEventListener("click", () => {
+      toggler.checked ?
+        enableDark() : disableDark();
+    })
+  </script>
 
 </body>
 

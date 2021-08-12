@@ -3,11 +3,11 @@
   --bs-brightRed: hsl(356, 69%, 56%);
   --bs-facebook: hsl(208, 92%, 53%);
   --bs-twitter: hsl(203, 89%, 53%);
-  --bs-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --bs-instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --bs-youTube: hsl(348, 97%, 39%);
-  --bs-Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
-  --bs-bg-VeryDarkBlue: hsl(230, 17%, 14%);
-  --bs-bg-top-VeryDarkBlue: hsl(232, 19%, 15%);
+  --bs-Toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --bs-bg-VeryDarkBlue: #1d2029;
+  --bs-bg-top-VeryDarkBlue: #20222f;
   --bs-bg-card-DarkDesaturatedBlue: hsl(228, 28%, 20%);
   --bs-text-DesaturatedBlue: hsl(228, 34%, 66%);
   --bs-text-White: hsl(0, 0%, 100%);
@@ -216,4 +216,49 @@ header h3 {
 .section-overview .stats .card-new-today {
   padding-top: 0;
   font-size: 0.8em;
+}
+
+body.dark {
+  background-color: var(--bs-bg-VeryDarkBlue);
+}
+body.dark header {
+  background-color: var(--bs-bg-top-VeryDarkBlue);
+}
+body.dark header h1 {
+  color: #fff;
+}
+body.dark header h3,
+body.dark header p {
+  color: var(--bs-text-DesaturatedBlue);
+}
+body.dark .slider {
+  background-color: var(--bs-Toggle-dark);
+}
+body.dark .slider:before {
+  background-color: var(--bs-bg-top-VeryDarkBlue);
+}
+body.dark input:checked + .slider {
+  background-color: transparent;
+  background-image: var(--bs-Toggle-dark);
+}
+body.dark input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+body.dark input:checked + .slider:before {
+  transform: translateX(26px);
+}
+body.dark .card {
+  background-color: var(--bs-bg-card-DarkDesaturatedBlue);
+}
+body.dark .card h3 {
+  color: #fff;
+}
+body.dark .card .card-user p {
+  color: var(--bs-text-DesaturatedBlue);
+}
+body.dark .card .card-followers p {
+  color: var(--bs-text-DesaturatedBlue);
+}
+body.dark .section-overview h2 {
+  color: var(--bs-text-DesaturatedBlue);
 }

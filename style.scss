@@ -4,12 +4,12 @@
   --bs-brightRed: hsl(356, 69%, 56%);
   --bs-facebook: hsl(208, 92%, 53%);
   --bs-twitter: hsl(203, 89%, 53%);
-  --bs-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --bs-instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --bs-youTube: hsl(348, 97%, 39%);
   // #### Dark Theme
-  --bs-Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
-  --bs-bg-VeryDarkBlue: hsl(230, 17%, 14%);
-  --bs-bg-top-VeryDarkBlue: hsl(232, 19%, 15%);
+  --bs-Toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --bs-bg-VeryDarkBlue: #1d2029;
+  --bs-bg-top-VeryDarkBlue: #20222f;
   --bs-bg-card-DarkDesaturatedBlue: hsl(228, 28%, 20%);
   --bs-text-DesaturatedBlue: hsl(228, 34%, 66%);
   --bs-text-White: hsl(0, 0%, 100%);
@@ -226,6 +226,7 @@ header {
 
   .card-user {
     justify-content: space-between;
+
     p {
       margin-left: 0;
     }
@@ -244,6 +245,72 @@ header {
     .card-new-today {
       padding-top: 0;
       font-size: 0.8em;
+    }
+  }
+}
+
+body.dark {
+  background-color: var(--bs-bg-VeryDarkBlue);
+
+  header {
+    h1 {
+      color: #fff;
+    }
+
+    h3,
+    p {
+      color: var(--bs-text-DesaturatedBlue);
+    }
+
+    background-color: var(--bs-bg-top-VeryDarkBlue);
+  }
+
+  .slider {
+    background-color: var(--bs-Toggle-dark);
+
+    &:before {
+      background-color: var(--bs-bg-top-VeryDarkBlue);
+    }
+  }
+
+  input {
+    &:checked+.slider {
+      background-color: transparent;
+      background-image: var(--bs-Toggle-dark);
+    }
+
+    &:focus+.slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    &:checked+.slider:before {
+      transform: translateX(26px);
+    }
+  }
+
+  .card {
+    background-color: var(--bs-bg-card-DarkDesaturatedBlue);
+
+    h3 {
+      color: #fff;
+    }
+
+    .card-user {
+      p {
+        color: var(--bs-text-DesaturatedBlue);
+      }
+    }
+
+    .card-followers {
+      p {
+        color: var(--bs-text-DesaturatedBlue);
+      }
+    }
+  }
+  .section-overview {
+  
+    h2 {
+      color: var(--bs-text-DesaturatedBlue);
     }
   }
 }
