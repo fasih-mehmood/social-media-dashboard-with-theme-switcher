@@ -108,12 +108,11 @@ header {
 
   h1 {
     font-size: 1.5em;
-    // color: var(--bs-text-DarkGrayishBlue);
   }
 
   h3 {
     color: var(--bs-text-DarkGrayishBlue);
-    font-size: 1em;
+    font-size: 0.9em;
     padding-top: 0.4em;
   }
 }
@@ -153,6 +152,10 @@ header {
   border-top: 4px solid var(--bs-facebook);
   padding-top: 2em;
   padding-bottom: 2em;
+
+  &.card-twitter {
+    border-top-color: var(--bs-twitter);
+  }
 }
 
 .card-user {
@@ -192,8 +195,55 @@ header {
   align-items: center;
   color: var(--bs-limeGreen);
   padding-top: 1.5em;
+
   p {
     font-weight: 700;
     font-size: 0.9em;
+    margin-left: 3px;
+  }
+}
+
+.text-bright-red {
+  color: var(--bs-brightRed);
+}
+
+.section-overview {
+
+  h2 {
+    color: var(--bs-text-DarkGrayishBlue);
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+  }
+
+  .card {
+    &>* {
+      width: 85%;
+      margin-inline: auto;
+    }
+
+    border-top: none;
+  }
+
+  .card-user {
+    justify-content: space-between;
+    p {
+      margin-left: 0;
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 1.2em;
+
+    h3 {
+      font-size: 2em;
+    }
+
+    .card-new-today {
+      padding-top: 0;
+      font-size: 0.8em;
+    }
   }
 }
