@@ -1,6 +1,6 @@
 :root {
-  --bs-LimeGreen: hsl(163, 72%, 41%);
-  --bs-BrightRed: hsl(356, 69%, 56%);
+  --bs-limeGreen: hsl(163, 72%, 41%);
+  --bs-brightRed: hsl(356, 69%, 56%);
   --bs-facebook: hsl(208, 92%, 53%);
   --bs-twitter: hsl(203, 89%, 53%);
   --bs-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
@@ -13,7 +13,7 @@
   --bs-text-White: hsl(0, 0%, 100%);
   --bs-Toggle: hsl(230, 22%, 74%);
   --bs-bg-White: hsl(0, 0%, 100%);
-  --bs-bg-top-VeryPaleBlue: hsl(225, 100%, 98%);
+  --bs-bg-top-VeryPaleBlue: #f8f9fe;
   --bs-bg-card-LightGrayishBlue: hsl(227, 47%, 96%);
   --bs-text-DarkGrayishBlue: hsl(228, 12%, 44%);
   --bs-text-VeryDarkBlue: hsl(230, 17%, 14%);
@@ -51,7 +51,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #aeb2cb;
+  background-color: var(--bs-Toggle);
   transition: 0.4s;
 }
 .slider:before {
@@ -90,6 +90,10 @@ input:checked + .slider:before {
 
 header {
   padding-top: 2em;
+  padding-bottom: 5em;
+  background: var(--bs-bg-top-VeryPaleBlue);
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
 }
 header h1 {
   font-size: 1.5em;
@@ -114,4 +118,62 @@ header h3 {
 }
 .mode-switch-container p {
   flex-basis: 100%;
+}
+
+.section-cards {
+  margin-top: -2.5em;
+}
+.section-cards .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: 100%;
+  background: #f0f3fa;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
+  border-top: 4px solid var(--bs-facebook);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.card-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-user p {
+  margin-left: 0.5em;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: var(--bs-text-DarkGrayishBlue);
+}
+
+.card-followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-followers h3 {
+  font-size: 3.5em;
+  padding-top: 0.2em;
+}
+.card-followers p {
+  color: var(--bs-text-DarkGrayishBlue);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.card-new-today {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-limeGreen);
+  padding-top: 1.5em;
+}
+.card-new-today p {
+  font-weight: 700;
+  font-size: 0.9em;
 }
