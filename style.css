@@ -54,12 +54,12 @@ html {
   background-color: var(--bs-Toggle);
   transition: 0.4s;
 }
-.slider:before {
+.slider:after {
   position: absolute;
   content: "";
   height: 16px;
   width: 16px;
-  left: 4px;
+  right: 4px;
   bottom: 4px;
   background-color: white;
   transition: 0.3s;
@@ -71,15 +71,15 @@ input:checked + .slider {
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-input:checked + .slider:before {
-  transform: translateX(26px);
+input:checked + .slider:after {
+  transform: translateX(-26px);
 }
 
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
-.slider.round:before {
+.slider.round:after {
   border-radius: 50%;
 }
 

@@ -58,12 +58,12 @@ html {
   background-color: var(--bs-Toggle);
   transition: .4s;
 
-  &:before {
+  &:after {
     position: absolute;
     content: "";
     height: 16px;
     width: 16px;
-    left: 4px;
+    right: 4px;
     bottom: 4px;
     background-color: white;
     transition: .3s;
@@ -79,8 +79,8 @@ input {
     box-shadow: 0 0 1px #2196F3;
   }
 
-  &:checked+.slider:before {
-    transform: translateX(26px);
+  &:checked+.slider:after {
+    transform: translateX(-26px);
   }
 }
 
@@ -88,7 +88,7 @@ input {
 .slider.round {
   border-radius: 34px;
 
-  &:before {
+  &:after {
     border-radius: 50%;
   }
 }
