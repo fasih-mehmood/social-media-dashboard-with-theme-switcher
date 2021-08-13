@@ -9,7 +9,6 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ### The challenge
@@ -22,10 +21,11 @@ Users should be able to:
 ### Screenshot
 
 ### Desktop View
-![Desktop View](./screenshots/desktop.png?raw=true "Desktop View")
+![Desktop View Light](./screenshots/desktop-light.png?raw=true "Desktop View Light")
+![Desktop View Dark](./screenshots/desktop-dark.png?raw=true "Desktop View Dark")
 ### Mobile View
-![Mobile View](./screenshots/mobile.png?raw=true "Mobile View")
-![Mobile Menu View](./screenshots/mobile-menu.png?raw=true "Mobile Menu View")
+![Mobile View Light](./screenshots/mobile-light.png?raw=true "Mobile View Light")
+![Mobile View Dark](./screenshots/mobile-dark.png?raw=true "Mobile View Dark")
 
 ### Links
 
@@ -37,28 +37,15 @@ Users should be able to:
 I coded the skeleton of the page in HTML.
 Then I set the layout of the page followed by styling all the components in CSS.
 The CSS was written using a mobile-first approach.
-After that I wrote javascript to make the hamburger functional and added a fade transition.
+After that I wrote javascript to make the dark mode functional.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
 - Mobile-first approach
 - JavaScript
-
-### What I learned
-
-I learned the use of :root selector which can be used to specify variables that can be used later on.
-
-```css
-:root {
-  --bs-primary: hsl(0, 100%, 68%);
-}
-.text-primary {
-  color: var(--bs-primary);
-}
-```
 
 ## Author
 
