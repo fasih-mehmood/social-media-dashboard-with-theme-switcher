@@ -67,7 +67,7 @@ html {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: .4s;
+    transition: .3s;
   }
 }
 
@@ -145,14 +145,11 @@ header {
 }
 
 .top-line {
-  display: absolute;
-  top: 0;
   height: 4px;
   width: 100%;
 }
 
 .card {
-  position: relative;
   flex-basis: 100%;
   background: #f0f3fa;
   margin-bottom: 1.5em;
