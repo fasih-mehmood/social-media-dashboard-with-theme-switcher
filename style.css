@@ -106,7 +106,7 @@ header h3 {
 
 .mode-switch-container {
   display: flex;
-  justify-content: between;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   border-top: 1px solid var(--bs-text-DarkGrayishBlue);
@@ -181,7 +181,7 @@ header h3 {
 }
 .card-followers h3 {
   font-size: 3.5em;
-  padding-top: 0.2em;
+  padding-top: 0.5em;
 }
 .card-followers p {
   color: var(--bs-text-DarkGrayishBlue);
@@ -282,4 +282,74 @@ body.dark .card .card-followers p {
 }
 body.dark .section-overview h2 {
   color: var(--bs-text-DesaturatedBlue);
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  header {
+    padding-bottom: 10em;
+  }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .container h1 {
+    white-space: nowrap;
+  }
+
+  .mode-switch-container {
+    margin-top: 0;
+    padding-top: 0;
+    width: auto;
+    border-top: none;
+    justify-content: initial;
+  }
+  .mode-switch-container p {
+    flex-basis: auto;
+    margin-right: 1em;
+  }
+
+  .section-cards {
+    margin-top: -7em;
+  }
+  .section-cards .container {
+    justify-content: space-between;
+  }
+  .section-cards .card {
+    flex-basis: 48%;
+  }
+
+  .section-overview .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .section-overview .cards .cards-container {
+    flex-basis: 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .section-cards .card {
+    flex-basis: 24%;
+  }
+
+  .section-overview .cards .cards-container {
+    flex-basis: 24%;
+  }
+}
+@media (min-width: 1280px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  .section-cards .card {
+    flex-basis: 23%;
+  }
+
+  .section-overview .cards .cards-container {
+    flex-basis: 23%;
+  }
 }
